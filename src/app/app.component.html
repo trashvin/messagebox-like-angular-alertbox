@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h3>
+    Welcome to Angular Material Dialog Box Sample!
+  </h3>
+</div>
+<div class="container box center">
+  <div style="text-align: center;">
+      <h3>Configuration</h3>
+  </div>
+  <mat-radio-group [(ngModel)]="config.style">
+      <mat-radio-button value=0>Full</mat-radio-button>
+      <mat-radio-button value=1>Simple</mat-radio-button>
+    </mat-radio-group>
+  <mat-form-field>
+    <input matInput type="text" id="title" placeholder="Dialog Title" [(ngModel)]="config.title"/>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput type="text" id="message" placeholder="Message" [(ngModel)]="config.message"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput type="text" id="additional_message" placeholder="Additional Message" [(ngModel)]="config.additional_message"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Button" [(ngModel)]="config.button">
+      <mat-option *ngFor="let button of buttons" [value]="button.value" >
+        {{ button.display }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Type" [(ngModel)]="config.type">
+      <mat-option *ngFor="let type of types" [value]="type.value" >
+        {{ type.display }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-checkbox [(ngModel)]="config.allow_click_outside_to_close">
+    Close when user clicks outside
+  </mat-checkbox>
+  <br/>
+  <button mat-raised-button color="primary" (click)="onShowClick()">Show Dialog</button>
+
+</div>

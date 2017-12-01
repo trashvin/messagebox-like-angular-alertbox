@@ -1,0 +1,30 @@
+<div mat-dialog-container>
+  <mat-toolbar *ngIf="style==0" color="primary" class="mat-elevation-z2">
+    <mat-card-header>{{title}}</mat-card-header>
+  </mat-toolbar>
+  <div class="message">
+    <p>{{message}}</p>
+  </div>
+  <div class="info" *ngIf="additional_message!==''">
+    <p>{{additional_message}}</p>
+  </div>
+  <div style="padding: 5px;float:right">
+    <div *ngIf="button==0">
+      <button mat-button color="accent" (click)="onOk()">OK</button>
+    </div>
+    <div *ngIf="button==1">
+      <button mat-button color="accent" (click)="onOk()" tabindex="-1">OK</button>
+      <button mat-button color="accent" (click)="onCancel()" tabindex="-1">CANCEL</button>
+    </div>
+    <div *ngIf="button==2">
+      <button mat-button color="accent" (click)="onYes()" tabindex="-1">YES</button>
+      <button mat-button color="accent" (click)="onNo()" tabindex="-1">NO</button>
+    </div>
+    <div *ngIf="button==3">
+      <button mat-button color="accent" (click)="onAccept()" tabindex="-1">ACCEPT</button>
+      <button mat-button color="accent" (click)="onReject()" tabindex="-1">REJECT</button>
+    </div>
+  </div>
+  
+</div>
+  
