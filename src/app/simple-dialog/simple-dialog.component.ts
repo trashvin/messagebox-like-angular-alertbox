@@ -13,8 +13,6 @@ export class SimpleDialogComponent {
   message: string;
   additional_message: string;
   button: number;
-  type: number;
-  show_icon: boolean;
   allow_click_outside_to_close: boolean;
   constructor(
     public dialogRef: MatDialogRef<SimpleDialogComponent>,
@@ -26,8 +24,6 @@ export class SimpleDialogComponent {
     this.message = data.configuration.message;
     this.additional_message = data.configuration.additional_message;
     this.button = data.configuration.button;
-    this.type = data.configuration.type;
-    this.show_icon = data.configuration.show_icon || false;
     this.dialogRef.disableClose = !data.configuration.allow_click_outside_to_close || false;
     
   }

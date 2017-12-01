@@ -17,14 +17,6 @@ export class AppComponent {
     {value: 2, display: "Yes/No"},
     {value: 3, display: "Accept/Cancel"},
   ];
-  types = [
-    {value: 0, display: "None"},
-    {value: 0, display: "Information"},
-    {value: 0, display: "Question"},
-    {value: 0, display: "Warning"},
-    {value: 0, display: "Alert"},
-    {value: 0, display: "Error"},
-  ];
   result;
   constructor(
     private dialog: MatDialog

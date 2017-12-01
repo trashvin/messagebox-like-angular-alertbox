@@ -6,6 +6,5 @@ export class DialogConfiguration {
   additional_message: string;
   button: number;
   type: number;
-  show_icon: boolean;
   allow_click_outside_to_close: boolean;
 }
