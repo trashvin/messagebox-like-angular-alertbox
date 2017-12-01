@@ -25,7 +25,7 @@ export class AppComponent {
     {value: 0, display: "Alert"},
     {value: 0, display: "Error"},
   ];
-  
+  result;
   constructor(
     private dialog: MatDialog
   ) {
@@ -38,6 +38,11 @@ export class AppComponent {
         configuration: this.config
       },
       width: "300px"
+    });
+
+    dialogRef.afterClosed().subscribe( result => {
+      console.log(result);
+      this.result = result.result;
     });
   }
 }
