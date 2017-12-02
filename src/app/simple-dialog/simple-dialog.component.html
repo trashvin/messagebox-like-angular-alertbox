@@ -5,12 +5,12 @@
   <div class="message">
     <p>{{message}}</p>
   </div>
-  <div class="info" *ngIf="additional_message!==''">
-    <p>{{additional_message}}</p>
+  <div class="info" *ngIf="information!==''">
+    <p>{{information}}</p>
   </div>
   <div style="padding: 5px;float:right">
     <div *ngIf="button==0">
-      <button mat-button color="accent" (click)="onOk()">OK</button>
+      <button mat-button color="accent" (click)="onOk()" tabindex="-1">OK</button>
     </div>
     <div *ngIf="button==1">
       <button mat-button color="accent" (click)="onOk()" tabindex="-1">OK</button>

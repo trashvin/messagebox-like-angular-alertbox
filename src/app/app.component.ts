@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { MatDialog, MAT_DIALOG_DATA } from "@angular/material";
 import { SimpleDialogComponent } from "./simple-dialog/simple-dialog.component";
-import { DialogConfiguration } from "./dialog-configuration";
+import { MessageBox, MessageBoxButton, MessageBoxStyle } from "./_shared/message-box";
 
 
 @Component({
@@ -10,7 +10,12 @@ import { DialogConfiguration } from "./dialog-configuration";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  config = new DialogConfiguration();
+  title;
+  message;
+  information;
+  button;
+  style;
+  allow_outside_click;
   buttons = [
     {value: 0, display: "Ok"},
     {value: 1, display: "Ok/Cancel"},
@@ -24,17 +29,8 @@ export class AppComponent {
 
   }
   onShowClick() {
-    console.log(this.config);
-    const dialogRef = this.dialog.open( SimpleDialogComponent, {
-      data: {
-        configuration: this.config
-      },
-      width: "300px"
-    });
-
-    dialogRef.afterClosed().subscribe( result => {
-      console.log(result);
-      this.result = result.result;
+    MessageBox.show(this.dialog, this.message,this.title,this.information,this.button,this.allow_outside_click,this.style).subscribe( result => {
+      this.result = (result === undefined) ? "none" : result.result;
     });
   }
 }

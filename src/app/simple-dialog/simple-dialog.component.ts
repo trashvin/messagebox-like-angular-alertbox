@@ -11,20 +11,20 @@ export class SimpleDialogComponent {
   style: number;
   title: string;
   message: string;
-  additional_message: string;
+  information: string;
   button: number;
-  allow_click_outside_to_close: boolean;
+  allow_outside_click: boolean;
   constructor(
     public dialogRef: MatDialogRef<SimpleDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { 
     console.log(data);
-    this.style = data.configuration.style || 1;
-    this.title = data.configuration.title;
-    this.message = data.configuration.message;
-    this.additional_message = data.configuration.additional_message;
-    this.button = data.configuration.button;
-    this.dialogRef.disableClose = !data.configuration.allow_click_outside_to_close || false;
+    this.style = data.style || 1;
+    this.title = data.title;
+    this.message = data.message;
+    this.information = data.information;
+    this.button = data.button;
+    this.dialogRef.disableClose = !data.allow_outside_click || false;
     
   }
   onOk() {
