@@ -5,6 +5,7 @@ export class MessageBox {
     static show(dialog: MatDialog, message, title ="Prompt", 
                 information="", button = 0,allow_outside_click=false, 
                 style = 0, width = "350px") {
+        console.log(width);
         let response = "";
         console.log("Show...");
         const dialogRef = dialog.open( SimpleDialogComponent, {

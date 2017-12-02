@@ -1,16 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h3>
-    Welcome to Angular Material Dialog Box Sample!
-  </h3>
-</div>
 <div class="container box center">
   <div style="text-align: center;">
-      <h3>Configuration</h3>
+      <h3>Angular MessageBox Alerts!</h3>
   </div>
   <mat-radio-group [(ngModel)]="style">
-      <mat-radio-button value={{MessageBoxStyle.Full}}>Full</mat-radio-button>
-      <mat-radio-button value={{MessageBoxStyle.Simple}}>Simple</mat-radio-button>
+      <mat-radio-button value={{style_full}}>Full</mat-radio-button>
+      <mat-radio-button value={{style_simple}}>Simple</mat-radio-button>
     </mat-radio-group>
     <br/>
   <mat-form-field>
@@ -20,7 +15,7 @@
     <textarea matInput type="text" id="message" placeholder="Message" [(ngModel)]="message"></textarea>
   </mat-form-field>
   <mat-form-field>
-    <textarea matInput type="text" id="additional_message" placeholder="Additional Message" [(ngModel)]="information"></textarea>
+    <textarea matInput type="text" id="additional_message" placeholder="Additional Information" [(ngModel)]="information"></textarea>
   </mat-form-field>
   <mat-form-field>
     <mat-select placeholder="Button" [(ngModel)]="button">
@@ -32,9 +27,9 @@
   <mat-checkbox [(ngModel)]="allow_outside_click">
     Close when user clicks outside
   </mat-checkbox>
+  <mat-form-field>
+      <input matInput type="text" id="size" placeholder="Dialog Width" [(ngModel)]="width"/>
+    </mat-form-field>
   <br/>
   <button mat-raised-button color="primary" (click)="onShowClick()">Show Dialog</button>
-  <br/>
-  Result: {{result}}
-
 </div>

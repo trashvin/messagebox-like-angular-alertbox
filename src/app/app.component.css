@@ -2,7 +2,7 @@ div.box {
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
   max-width:300px;
   border: solid;
   width: 100%;
