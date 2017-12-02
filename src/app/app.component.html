@@ -9,8 +9,8 @@
       <h3>Configuration</h3>
   </div>
   <mat-radio-group [(ngModel)]="style">
-      <mat-radio-button value=0>Full</mat-radio-button>
-      <mat-radio-button value=1>Simple</mat-radio-button>
+      <mat-radio-button value={{MessageBoxStyle.Full}}>Full</mat-radio-button>
+      <mat-radio-button value={{MessageBoxStyle.Simple}}>Simple</mat-radio-button>
     </mat-radio-group>
     <br/>
   <mat-form-field>

@@ -17,10 +17,10 @@ export class AppComponent {
   style;
   allow_outside_click;
   buttons = [
-    {value: 0, display: "Ok"},
-    {value: 1, display: "Ok/Cancel"},
-    {value: 2, display: "Yes/No"},
-    {value: 3, display: "Accept/Cancel"},
+    {value: MessageBoxButton.Ok, display: "Ok"},
+    {value: MessageBoxButton.OkCancel, display: "Ok/Cancel"},
+    {value: MessageBoxButton.YesNo, display: "Yes/No"},
+    {value: MessageBoxButton.AcceptReject, display: "Accept/Cancel"},
   ];
   result;
   constructor(

@@ -1,6 +1,5 @@
 import { MatDialog, MAT_DIALOG_DATA } from "@angular/material";
 import { SimpleDialogComponent } from "../simple-dialog/simple-dialog.component";
-import { inflate } from "zlib";
 
 export class MessageBox {
     static show(dialog: MatDialog, message, title ="Prompt", 
