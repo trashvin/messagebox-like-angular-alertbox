@@ -19,7 +19,7 @@ export class SimpleDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { 
     console.log(data);
-    this.style = data.style || 1;
+    this.style = data.style || 0;
     this.title = data.title;
     this.message = data.message;
     this.information = data.information;

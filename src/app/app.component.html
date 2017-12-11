@@ -1,8 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="container box center">
-  <div style="text-align: center;">
-      <h3>Angular MessageBox Alerts!</h3>
-  </div>
+<div class="box center">
+  <mat-card-title style="text-align: center;">
+      <p>Angular MessageBox Alerts!</p>
+  </mat-card-title>
   <mat-radio-group [(ngModel)]="style">
       <mat-radio-button value={{style_full}}>Full</mat-radio-button>
       <mat-radio-button value={{style_simple}}>Simple</mat-radio-button>
@@ -31,5 +31,6 @@
       <input matInput type="text" id="size" placeholder="Dialog Width" [(ngModel)]="width"/>
     </mat-form-field>
   <br/>
-  <button mat-raised-button color="primary" (click)="onShowClick()">Show Dialog</button>
+  <button mat-raised-button color="primary" (click)="onShowClick()">Show Dialog</button><br/>
+  <button mat-raised-button color="primary" (click)="onSendService()">Send By Service</button>
 </div>

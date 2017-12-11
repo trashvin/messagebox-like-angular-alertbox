@@ -16,6 +16,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 
 import { AppComponent } from "./app.component";
 import { SimpleDialogComponent } from "./simple-dialog/simple-dialog.component";
+import { MessageService } from "./_shared/message.service";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SimpleDialogComponent } from "./simple-dialog/simple-dialog.component";
     MatToolbarModule
   ],
   providers: [
-    {provide: MAT_DIALOG_DATA, useValue: {}}
+    {provide: MAT_DIALOG_DATA, useValue: {}},
+    MessageService
   ],
   bootstrap: [AppComponent]
 })
